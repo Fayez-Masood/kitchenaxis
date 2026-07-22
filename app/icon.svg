@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="KitchenAxis">
+  <defs>
+    <linearGradient id="ka-orange" x1="0" y1="0" x2="0.15" y2="1">
+      <stop offset="0" stop-color="#F9A33C"/>
+      <stop offset="0.55" stop-color="#F7941E"/>
+      <stop offset="1" stop-color="#E8641C"/>
+    </linearGradient>
+    <linearGradient id="ka-swoosh" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#6b7280"/>
+      <stop offset="1" stop-color="#b0b7c0"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="#23262b"/>
+  <g transform="translate(106,148) scale(1.25)">
+    <path d="M40 126 C96 104 150 92 206 62 C160 96 104 116 50 138 Z" fill="url(#ka-swoosh)"/>
+    <g stroke="#ffffff" stroke-width="23" stroke-linecap="butt" stroke-linejoin="miter" fill="none">
+      <path d="M34 20 V138"/>
+      <path d="M46 80 L106 20"/>
+      <path d="M46 78 L106 138"/>
+    </g>
+    <path d="M130 138 L173 20 L216 138" fill="none" stroke="url(#ka-orange)" stroke-width="23" stroke-linecap="butt" stroke-linejoin="miter"/>
+  </g>
+</svg>
