@@ -87,7 +87,7 @@ export const en = {
       },
       response: {
         title: "Guaranteed fast response",
-        desc: `A technician responds within ${R} hours for emergencies — every hour of downtime costs you covers.`,
+        desc: `A technician responds within ${R} hours for emergencies — because every hour of downtime costs you covers and revenue.`,
       },
       parts: {
         title: "Genuine spare parts",

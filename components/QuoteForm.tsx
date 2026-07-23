@@ -4,6 +4,7 @@ import { useState } from "react";
 import { CheckCircle2, AlertCircle, Loader2, MessageCircle } from "lucide-react";
 import type { Dictionary, Locale } from "@/lib/i18n";
 import { site, whatsappUrl } from "@/lib/site";
+import { trackLead } from "@/lib/gtag";
 
 const fieldCls =
   "h-11 w-full rounded-sm border border-charcoal-300 bg-white px-3.5 text-base text-charcoal-900 placeholder:text-charcoal-400 transition-colors hover:border-charcoal-400 focus:border-brand-500";
@@ -44,6 +45,7 @@ export function QuoteForm({
       });
       if (!res.ok) throw new Error("bad status");
       setStatus("done");
+      trackLead(source, locale);
       form.reset();
     } catch {
       setStatus("error");
