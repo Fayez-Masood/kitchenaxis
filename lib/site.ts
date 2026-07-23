@@ -10,9 +10,9 @@ export const site = {
   url: "https://kitchenaxis.co",
 
   // --- Contact (TODO: confirm real numbers) -------------------------------
-  phone: "+966500377309", // dial format (E.164)
-  phoneDisplay: "+966 50 037 7309",
-  whatsapp: "966554550052", // digits only, country code, no +  (for wa.me links)
+  phone: "+966535489318", // dial format (E.164)
+  phoneDisplay: "+966 53 548 9318",
+  whatsapp: "966535489318", // digits only, country code, no +  (for wa.me links)
   email: "info@kitchenaxis.co",
 
   // --- Key trust figures (TODO: confirm) ----------------------------------

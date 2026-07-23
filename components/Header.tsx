@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion } from "motion/react";
-import { Menu, X, Phone, Siren } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { Logo } from "@/components/ui/Logo";
 import { Button } from "@/components/ui/Button";
 import { LanguageToggle } from "@/components/LanguageToggle";
@@ -48,7 +48,7 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           : "bg-white/80 backdrop-blur-md",
       )}
     >
-      <div className="mx-auto flex h-16 max-w-[1200px] items-center gap-4 px-5 md:h-18 md:px-8">
+      <div className="mx-auto flex h-16 max-w-[1200px] items-center gap-3 px-5 md:h-18 md:px-8">
         <motion.div
           initial={{ opacity: 0, x: -12 }}
           animate={{ opacity: 1, x: 0 }}
@@ -63,12 +63,12 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           </Link>
         </motion.div>
 
-        <nav className="ms-2 hidden items-center gap-1 lg:flex" aria-label="Primary">
+        <nav className="ms-1 hidden items-center gap-0.5 xl:flex" aria-label="Primary">
           {links.map((l) => (
             <Link
               key={l.href}
               href={l.href}
-              className="group relative rounded-md px-3 py-2 text-sm font-medium text-charcoal-700 transition-colors hover:text-charcoal-900"
+              className="group relative whitespace-nowrap rounded-md px-2.5 py-2 text-sm font-medium text-charcoal-700 transition-colors hover:text-charcoal-900"
             >
               {l.label}
               <span
@@ -82,23 +82,13 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
         <div className="ms-auto flex items-center gap-2">
           <a
             href={`tel:${site.phone}`}
-            className="hidden items-center gap-2 rounded-md px-2 py-1.5 text-sm font-semibold text-charcoal-800 transition-colors hover:text-brand-700 xl:flex"
+            className="hidden items-center gap-2 whitespace-nowrap rounded-lg border border-charcoal-200 px-3 py-1.5 text-sm font-semibold text-charcoal-800 transition-colors hover:border-brand-300 hover:text-brand-700 xl:flex"
+            aria-label={`${dict.nav.emergency}: ${site.phoneDisplay}`}
             dir="ltr"
           >
-            <Phone className="size-4" aria-hidden />
+            <Phone className="size-4 text-brand-600" aria-hidden />
             {site.phoneDisplay}
           </a>
-
-          <Button
-            href={`tel:${site.phone}`}
-            external
-            variant="ghostBrand"
-            size="sm"
-            className="hidden gap-1.5 !text-error-600 hover:!bg-error-50 sm:inline-flex"
-          >
-            <Siren className="size-4" aria-hidden />
-            {dict.nav.emergency}
-          </Button>
 
           <LanguageToggle
             locale={locale}
@@ -118,7 +108,7 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
-            className="inline-flex size-10 items-center justify-center rounded-md text-charcoal-800 hover:bg-charcoal-100 lg:hidden"
+            className="inline-flex size-10 items-center justify-center rounded-md text-charcoal-800 hover:bg-charcoal-100 xl:hidden"
             aria-label={open ? dict.cs.close : "Menu"}
             aria-expanded={open}
           >
@@ -129,7 +119,7 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
 
       {/* Mobile sheet */}
       {open && (
-        <div className="lg:hidden">
+        <div className="xl:hidden">
           <button
             className="fixed inset-0 top-16 z-[1010] bg-charcoal-900/30"
             aria-hidden
