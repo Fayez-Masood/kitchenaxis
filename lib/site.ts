@@ -7,7 +7,9 @@
 export const site = {
   name: "KitchenAxis",
   domain: "kitchenaxis.co",
-  url: "https://kitchenaxis.co",
+  // Canonical host is www (Vercel primary + Search Console property).
+  // The apex kitchenaxis.co 308-redirects to www.
+  url: "https://www.kitchenaxis.co",
 
   // --- Contact (TODO: confirm real numbers) -------------------------------
   phone: "+966535489318", // dial format (E.164)
