@@ -5,9 +5,9 @@ const R = site.responseHours;
 export const en = {
   dir: "ltr",
   meta: {
-    title: "KitchenAxis — Commercial Kitchen Equipment Maintenance in Saudi Arabia",
+    title: "Commercial Kitchen Repair & Maintenance | KitchenAxis KSA",
     description:
-      "KitchenAxis repairs, maintains, and installs professional kitchen equipment across Saudi Arabia. 24/7 emergency service, certified technicians, and annual maintenance contracts for restaurants, hotels, cafés, bakeries, hospitals, and catering.",
+      "Fast repair, maintenance & installation for commercial kitchens across Saudi Arabia. 24/7 emergency, 2-hour response, certified techs & AMC plans.",
   },
   nav: {
     services: "Services",
@@ -111,6 +111,44 @@ export const en = {
     intro:
       "No stock photos — every image is our own technicians servicing real commercial kitchen equipment on site.",
     note: "A selection from recent service visits. Hover to see any job in full detail.",
+  },
+  faq: {
+    eyebrow: "FAQ",
+    title: "Answers before you call",
+    items: [
+      {
+        q: "How fast can you reach my kitchen in an emergency?",
+        a: `For emergencies we aim to have a technician on the way within ${R} hours across Riyadh, Jeddah, Dammam, Makkah and Madinah. Calling or WhatsApp is always the fastest route.`,
+      },
+      {
+        q: "Which cities do you cover?",
+        a: "We serve commercial kitchens across Saudi Arabia, with technicians in Riyadh, Jeddah, Dammam, Makkah and Madinah. Elsewhere in the Kingdom? Ask us — we often cover surrounding areas.",
+      },
+      {
+        q: "What types of equipment do you repair?",
+        a: "Cooking lines (ranges, fryers, griddles, ovens, salamanders), refrigeration and cold rooms, dishwashers, bakery ovens, espresso and beverage machines, ice and ice-cream makers, and more.",
+      },
+      {
+        q: "Which brands do you service?",
+        a: "Our technicians work across all major commercial kitchen brands — including Rational, Electrolux, Hobart, Winterhalter, Williams, Foster and La Marzocco. Tell us your model and we'll confirm.",
+      },
+      {
+        q: "Do you offer a warranty on repairs?",
+        a: "Yes. Every repair comes with a written workmanship warranty, and we fit genuine spare parts wherever possible.",
+      },
+      {
+        q: "How much does an Annual Maintenance Contract cost?",
+        a: "AMC pricing depends on your equipment count, kitchen type and number of sites. We build a plan around your needs and give you a fixed, predictable annual price — request a free quote.",
+      },
+      {
+        q: "Do you charge a call-out fee?",
+        a: "We give you a transparent quote before any work begins — no hidden call-out surprises. Any inspection or diagnostic fee is disclosed upfront.",
+      },
+      {
+        q: "Can you handle multiple branches under one contract?",
+        a: "Yes. Our Enterprise plan covers all your sites under a single contract, one point of contact, and consolidated reporting.",
+      },
+    ],
   },
   industries: {
     eyebrow: "Who We Serve",

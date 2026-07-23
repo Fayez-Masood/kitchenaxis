@@ -30,6 +30,7 @@ import { Logo } from "@/components/ui/Logo";
 import { QuoteForm } from "@/components/QuoteForm";
 import { Reveal, StaggerGroup, StaggerItem } from "@/components/motion/Motion";
 import { HeroBadges } from "@/components/motion/HeroBadges";
+import { CountUp } from "@/components/motion/CountUp";
 import { otherLocale, type Dictionary, type Locale } from "@/lib/i18n";
 import { site, whatsappUrl } from "@/lib/site";
 
@@ -123,7 +124,26 @@ export function SiteDark({ locale, dict }: { locale: Locale; dict: Dictionary })
       <main id="main">
         {/* HERO */}
         <section className="hero" id="top">
-          <div className="hero-photo" />
+          <picture className="hero-photo">
+            <source
+              media="(max-width: 650px)"
+              srcSet="/images/hero-technician-mobile.webp"
+            />
+            <source
+              media="(max-width: 1050px)"
+              srcSet="/images/hero-technician-tablet.webp"
+            />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/hero-technician-desktop.webp"
+              alt={
+                ar
+                  ? "فني كيتشن أكسِس يفحص فرناً تجارياً في مطبخ"
+                  : "KitchenAxis technician diagnosing a commercial oven"
+              }
+              fetchPriority="high"
+            />
+          </picture>
           <div className="hero-shade" />
           <StaggerGroup as="div" className="hero-content">
             <StaggerItem as="p" className="eyebrow">
@@ -226,22 +246,22 @@ export function SiteDark({ locale, dict }: { locale: Locale; dict: Dictionary })
             <div className="stats">
               <div>
                 <b>
-                  {site.yearsExperience}
-                  {s.years.suffix}
+                  <CountUp value={site.yearsExperience} suffix={s.years.suffix} />
                 </b>
                 <span>{s.years.label}</span>
               </div>
               <div>
                 <b>
-                  {site.kitchensServed}
-                  {s.kitchens.suffix}
+                  <CountUp
+                    value={site.kitchensServed}
+                    suffix={s.kitchens.suffix}
+                  />
                 </b>
                 <span>{s.kitchens.label}</span>
               </div>
               <div>
                 <b>
-                  {site.responseHours}
-                  {s.response.suffix || "h"}
+                  <CountUp value={site.responseHours} suffix={s.response.suffix} />
                 </b>
                 <span>{s.response.label}</span>
               </div>
@@ -264,18 +284,20 @@ export function SiteDark({ locale, dict }: { locale: Locale; dict: Dictionary })
             </div>
             <p className="sub">{dict.gallery.intro}</p>
           </Reveal>
-          <StaggerGroup as="div" className="work-strip">
-            {workStrip.map((x, i) => (
-              <StaggerItem as="figure" key={x}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={`/images/${x}`}
-                  alt={`${ar ? "عمل ميداني" : "On-site field work"} ${i + 1}`}
-                  loading="lazy"
-                />
-              </StaggerItem>
-            ))}
-          </StaggerGroup>
+          <div className="work-carousel marquee-mask">
+            <div className="work-track animate-marquee">
+              {[...workStrip, ...workStrip].map((x, i) => (
+                <figure key={`${x}-${i}`}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={`/images/${x}`}
+                    alt={`${ar ? "عمل ميداني" : "On-site field work"} ${(i % workStrip.length) + 1}`}
+                    loading="lazy"
+                  />
+                </figure>
+              ))}
+            </div>
+          </div>
         </section>
 
         {/* SECTORS */}
@@ -426,10 +448,28 @@ export function SiteDark({ locale, dict }: { locale: Locale; dict: Dictionary })
           </StaggerGroup>
         </section>
 
+        {/* FAQ */}
+        <section className="section faq-section" id="faq">
+          <Reveal as="div" className="center-head">
+            <p className="kicker">{k("09", dict.faq.eyebrow)}</p>
+            <h2 className="h-xl" style={{ marginTop: 18 }}>
+              {dict.faq.title}
+            </h2>
+          </Reveal>
+          <Reveal as="div" className="faq-list">
+            {dict.faq.items.map((f, i) => (
+              <details className="faq-item" key={i} open={i === 0}>
+                <summary>{f.q}</summary>
+                <p>{f.a}</p>
+              </details>
+            ))}
+          </Reveal>
+        </section>
+
         {/* CONTACT */}
         <section className="contact" id="contact">
           <Reveal as="div">
-            <p className="kicker">{k("09", dict.contact.eyebrow)}</p>
+            <p className="kicker">{k("10", dict.contact.eyebrow)}</p>
             <h2 className="h-xl">{dict.contact.title}</h2>
             <p className="sub">{dict.contact.subtitle}</p>
             <div className="contact-buttons">

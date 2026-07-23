@@ -26,11 +26,26 @@ export default async function HomePage({
     slogan: "Equipment · Service · Excellence",
   };
 
+  const faqLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    inLanguage: l,
+    mainEntity: dict.faq.items.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
       />
       <SiteDark locale={l} dict={dict} />
     </>
