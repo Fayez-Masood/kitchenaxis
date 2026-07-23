@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import {
   Flame,
   Snowflake,
@@ -192,8 +193,14 @@ export function SiteDark({ locale, dict }: { locale: Locale; dict: Dictionary })
               const it = dict.services.items[key];
               return (
                 <StaggerItem as="article" key={key}>
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={img} alt={it.title} loading="lazy" />
+                  <div className="card-media">
+                    <Image
+                      src={img}
+                      alt={it.title}
+                      fill
+                      sizes="(max-width: 650px) 100vw, (max-width: 1050px) 50vw, 360px"
+                    />
+                  </div>
                   <div className="card-icon">
                     <Icon className="size-6" aria-hidden />
                   </div>
@@ -229,15 +236,15 @@ export function SiteDark({ locale, dict }: { locale: Locale; dict: Dictionary })
             </div>
           </Reveal>
           <Reveal as="div" className="why-image" delay={0.1}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="/images/refrigeration-v2.webp"
               alt={
                 ar
                   ? "فني كيتشن أكسِس يصون معدات تبريد تجارية"
                   : "KitchenAxis technician servicing commercial refrigeration"
               }
-              loading="lazy"
+              fill
+              sizes="(max-width: 1050px) 100vw, 50vw"
             />
             <div className="stats">
               <div>
@@ -284,11 +291,11 @@ export function SiteDark({ locale, dict }: { locale: Locale; dict: Dictionary })
             <div className="work-track animate-marquee">
               {[...workStrip, ...workStrip].map((x, i) => (
                 <figure key={`${x}-${i}`}>
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
+                  <Image
                     src={`/images/${x}`}
                     alt={`${ar ? "عمل ميداني" : "On-site field work"} ${(i % workStrip.length) + 1}`}
-                    loading="lazy"
+                    fill
+                    sizes="(max-width: 650px) 280px, (max-width: 1050px) 360px, 460px"
                   />
                 </figure>
               ))}
