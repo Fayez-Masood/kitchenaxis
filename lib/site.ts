@@ -13,7 +13,8 @@ export const site = {
   phone: "+966535489318", // dial format (E.164)
   phoneDisplay: "+966 53 548 9318",
   whatsapp: "966535489318", // digits only, country code, no +  (for wa.me links)
-  email: "info@kitchenaxis.co",
+  email: "sales@kitchenaxis.co", // primary contact / quotes
+  supportEmail: "support@kitchenaxis.co",
 
   // --- Key trust figures (TODO: confirm) ----------------------------------
   responseHours: 2, // "technician response within X hours" — the headline SLA

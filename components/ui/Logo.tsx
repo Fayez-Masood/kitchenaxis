@@ -9,7 +9,7 @@ import { cn } from "@/lib/cn";
      • swoosh   — metallic grey ribbon sweeping up-right through the monogram
      • wordmark — KITCHEN (charcoal) + AXIS (orange), tight geometric caps
      • tagline  — EQUIPMENT · SERVICE · EXCELLENCE with orange separators
-     • domain   — kitchenaxis.sa flanked by rule lines (stacked variant only)
+     • domain   — kitchenaxis.co flanked by rule lines (stacked variant only)
 
    One source of truth: change the mark here and it updates everywhere
    (header, footer, hero, CS+ widget, favicon export).
@@ -171,7 +171,7 @@ export function Logo({
               inverse ? "bg-charcoal-500" : "bg-charcoal-300",
             )}
           />
-          kitchenaxis.sa
+          kitchenaxis.co
           <span
             aria-hidden
             className={cn(

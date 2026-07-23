@@ -9,7 +9,7 @@ image is used, so it stays crisp at every size and animates natively.
 - **Swoosh** — metallic grey ribbon sweeping up-right through the monogram
 - **Wordmark** — `KITCHEN` (charcoal) + `AXIS` (orange), tight geometric caps (Sora 700)
 - **Tagline** — EQUIPMENT · SERVICE · EXCELLENCE with orange separators
-- **Domain rule** — kitchenaxis.sa flanked by rule lines (stacked variant only)
+- **Domain rule** — kitchenaxis.co flanked by rule lines (stacked variant only)
 
 ## Component API — `components/ui/Logo.tsx`
 One source of truth; edit the mark once and it updates everywhere.
@@ -51,8 +51,8 @@ watermark, self-drawing logo, staggered service cards with hover lift + gradient
 accents, animated nav underline, logo entrance. Every animation collapses to a
 static, fully-visible state under `prefers-reduced-motion: reduce`.
 
-## ⚠️ Reconcile before launch
-The supplied logo reads **kitchenaxis.sa**, but `lib/site.ts` is currently set to
-**kitchenaxis.co**. Pick one domain and make the logo + config agree (update the
-`kitchenaxis.sa` text in `Logo.tsx` `stacked` variant and the two stacked/
-horizontal SVGs, or change `site.domain`/`site.url`).
+## Domain
+Standardized on **kitchenaxis.co** — `lib/site.ts`, the `Logo.tsx` stacked
+variant, and the brand SVGs all read `kitchenaxis.co`. (The supplied `logo.png`
+raster in `public/images/` still shows `kitchenaxis.sa` and is unused by the
+site; regenerate it if you need a raster master with the correct domain.)

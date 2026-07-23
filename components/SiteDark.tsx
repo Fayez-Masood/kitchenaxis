@@ -540,6 +540,15 @@ export function SiteDark({ locale, dict }: { locale: Locale; dict: Dictionary })
                     {site.email}
                   </a>
                 </li>
+                <li>
+                  <a
+                    href={`mailto:${site.supportEmail}`}
+                    className="inline-flex items-center gap-2 text-[#9aa0a6] transition-colors hover:text-white"
+                  >
+                    <Mail className="size-4 text-[#ff5a0a]" aria-hidden />
+                    {site.supportEmail}
+                  </a>
+                </li>
                 <li className="inline-flex items-center gap-2 text-[#7f858b]">
                   <Clock className="size-4 text-[#ff5a0a]" aria-hidden />
                   {dict.footer.hours}

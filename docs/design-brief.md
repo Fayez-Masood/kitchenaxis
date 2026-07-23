@@ -48,7 +48,7 @@ cartoon flames, and generic stock gradients.
   no crossbar) + a **metallic grey swoosh** sweeping up-right through the mark.
 - **Wordmark:** `KITCHEN` (charcoal) + `AXIS` (orange), tight geometric caps.
 - **Tagline lockup:** EQUIPMENT · SERVICE · EXCELLENCE with orange dot
-  separators; stacked version adds `kitchenaxis.sa` flanked by rule lines.
+  separators; stacked version adds `kitchenaxis.co` flanked by rule lines.
 - Variations available: horizontal, stacked, monogram-only, white/inverse.
 
 ## 6. Color palette (exact — brand-locked)
@@ -150,5 +150,4 @@ real photography is supplied.
   Tailwind v4 + Framer Motion**, bilingual with RTL.
 
 ---
-*Note: current logo artwork reads `kitchenaxis.sa`; site config uses
-`kitchenaxis.co` — confirm the correct domain before finalizing.*
+*Domain: standardized on `kitchenaxis.co` across config, logo, and metadata.*
