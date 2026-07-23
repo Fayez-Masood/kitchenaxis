@@ -134,6 +134,9 @@
 }
 .stats div { display: grid; text-align: center; padding: 14px; }
 .stats b { font-family: var(--font-family-display); font-size: 44px; line-height: 1; }
+/* Count-up number renders in a <span>; keep it at the big <b> size, not the
+   small grey label style below. */
+.stats b span { font-size: inherit; font-weight: inherit; color: inherit; margin: 0; }
 .stats span { color: #677078; font-size: 13px; font-weight: 700; margin-top: 6px; }
 
 /* Work strip */
