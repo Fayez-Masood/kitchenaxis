@@ -145,19 +145,15 @@ export function SiteDark({ locale, dict }: { locale: Locale; dict: Dictionary })
             />
           </picture>
           <div className="hero-shade" />
-          <StaggerGroup as="div" className="hero-content">
-            <StaggerItem as="p" className="eyebrow">
-              {dict.hero.eyebrow}
-            </StaggerItem>
-            <StaggerItem as="h1">
+          <div className="hero-content">
+            <p className="eyebrow">{dict.hero.eyebrow}</p>
+            <h1>
               {dict.hero.titleLead}
               <br />
               <span>{dict.hero.titleAccent}</span>
-            </StaggerItem>
-            <StaggerItem as="p" className="intro">
-              {dict.hero.subtitle}
-            </StaggerItem>
-            <StaggerItem as="div" className="hero-buttons">
+            </h1>
+            <p className="intro">{dict.hero.subtitle}</p>
+            <div className="hero-buttons">
               <a className="btn-primary" href="#contact">
                 {dict.hero.ctaPrimary}
                 <ArrowRight className="size-4 rtl:-scale-x-100" aria-hidden />
@@ -165,8 +161,8 @@ export function SiteDark({ locale, dict }: { locale: Locale; dict: Dictionary })
               <a className="btn-secondary" href={`tel:${site.phone}`}>
                 {dict.hero.ctaSecondary}
               </a>
-            </StaggerItem>
-            <StaggerItem as="div" className="proof">
+            </div>
+            <div className="proof">
               <span>
                 <BadgeCheck className="size-5" aria-hidden />
                 {dict.hero.trust[0]}
@@ -179,8 +175,8 @@ export function SiteDark({ locale, dict }: { locale: Locale; dict: Dictionary })
                 <ShieldCheck className="size-5" aria-hidden />
                 {dict.hero.trust[2]}
               </span>
-            </StaggerItem>
-          </StaggerGroup>
+            </div>
+          </div>
           <HeroBadges locale={locale} />
         </section>
 
