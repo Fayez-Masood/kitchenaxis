@@ -48,3 +48,6 @@ next-env.d.ts
 /Pictures/
 WhatsApp Image*.jpeg
 WhatsApp Image*.jpg
+
+# source archives dropped into the project
+*.zip

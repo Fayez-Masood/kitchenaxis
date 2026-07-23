@@ -160,8 +160,8 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  background: var(--ka-bg);
-  color: var(--color-charcoal-800);
+  background: #090b0c;
+  color: #f7f7f4;
   font-family: var(--font-family-body);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -186,13 +186,20 @@ input[dir="ltr"] {
 }
 
 /* Utility helpers referenced by components */
-.eyebrow {
+.eyebrow,
+.kicker {
   font-family: var(--font-family-display);
-  font-size: var(--text-eyebrow);
+  color: var(--orange, #ff5a0a);
+  font-size: 12px;
   line-height: 1.2;
-  letter-spacing: 0.12em;
-  font-weight: 600;
+  letter-spacing: 0.18em;
+  font-weight: 800;
   text-transform: uppercase;
+}
+html[lang="ar"] .kicker {
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 700;
 }
 .font-display {
   font-family: var(--font-family-display);

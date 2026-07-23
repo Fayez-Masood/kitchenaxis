@@ -21,18 +21,18 @@ export const en = {
   },
   langToggle: { target: "العربية", aria: "التغيير إلى العربية" },
   hero: {
-    eyebrow: "Commercial Kitchen Experts · Saudi Arabia",
-    titleLead: "Keep your kitchen",
-    titleAccent: "running.",
-    titleTail: "Always.",
+    eyebrow: "Commercial kitchen specialists · Saudi Arabia",
+    titleLead: "Commercial kitchens",
+    titleAccent: "don’t get downtime.",
+    titleTail: "",
     subtitle:
-      "Fast, certified repair, maintenance, and installation for commercial kitchen equipment — so downtime never costs you another service.",
-    ctaPrimary: "Get a Free Quote",
-    ctaSecondary: "Explore Services",
+      "Installation, preventive maintenance and rapid repairs for restaurants, hotels, cafés and central kitchens across Saudi Arabia.",
+    ctaPrimary: "Request service",
+    ctaSecondary: "Call now",
     trust: [
-      `Response within ${R} hours`,
-      "24/7 emergency support",
       "Certified technicians",
+      `${R}-hour emergency response`,
+      "Warranty-backed work",
     ],
   },
   emergency: {
